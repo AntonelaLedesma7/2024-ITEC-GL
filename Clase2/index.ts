@@ -32,3 +32,31 @@ class Inventory {
     return lowStockProducts
   }
 }
+
+// Uso de métodos
+const newInventory = new Inventory()
+
+const product1: Product = {
+    id:1,
+    name: "Lapicera",
+    price: 5.5,
+    quantity:25
+}
+
+const product2: Product = {
+    id:2,
+    name: "Tijera",
+    price: 10,
+    quantity:78
+}
+
+newInventory.addProduct(product1)
+newInventory.addProduct(product2)
+
+const totalInventory = newInventory.getTotalValue()
+
+const lowStock = newInventory.getLowStockProducts(30)
+
+console.log(lowStock)
+console.log(totalInventory)
+console.log(newInventory)
